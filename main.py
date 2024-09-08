@@ -40,5 +40,5 @@ file = st.file_uploader("Upload a Photo", type=["jpg", "png"])
 if file is None:
     st.text("Please upload an image file")
 else:
-    grayscale_img = module.conver_to_grayscale(file)
+    grayscale_img = conver_to_grayscale(file)
     st.image(grayscale_img)
