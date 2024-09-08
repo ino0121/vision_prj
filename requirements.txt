@@ -1,0 +1,6 @@
+streamlit
+streamlit-player
+pandas
+numpy
+matplotlib
+pillow
