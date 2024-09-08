@@ -8,13 +8,14 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # 이미지를 변환하는 함수 선언
-def convert_to_grayscale(input_path, output_path):
+def convert_to_grayscale(input_path, output_path=None):
     with Image.open(input_path) as img:
         # 흑백으로 변환
         grayscale_img = img.convert('L')
 
         # 이미지 저장
-        grayscale_img.save(output_path)
+        if output_path:
+            grayscale_img.save(output_path)
 
         # 변환된 이미지를 리턴
         return grayscale_img
