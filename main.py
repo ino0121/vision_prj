@@ -42,4 +42,7 @@ if file is None:
     st.text("Please upload an image file")
 else:
     grayscale_img = convert_to_grayscale(file)
+    st.write("Converted image")
     st.image(grayscale_img)
+    st.write("Original image")
+    st.image(file)
