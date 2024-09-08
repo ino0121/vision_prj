@@ -8,7 +8,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # 이미지를 변환하는 함수 선언
-def conver_to_grayscale(input_path, output_path):
+def convert_to_grayscale(input_path, output_path):
     with Image.open(input_path) as img:
         # 흑백으로 변환
         grayscale_img = img.convert('L')
@@ -40,5 +40,5 @@ file = st.file_uploader("Upload a Photo", type=["jpg", "png"])
 if file is None:
     st.text("Please upload an image file")
 else:
-    grayscale_img = conver_to_grayscale(file)
+    grayscale_img = convert_to_grayscale(file)
     st.image(grayscale_img)
